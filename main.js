@@ -1,4 +1,4 @@
-const add = (x, y) => { return x + y }
+const add = (x, y, z) => { return x + y }
 
 const validate = async (event) => {
   console.log(`triggered validate on ${event.target.id}`)
@@ -15,10 +15,10 @@ const updateWithAdd = async (event) => {
   document.querySelector('#result').innerHTML = ''
   if (document.querySelector('#firstNumber').checkValidity() && document.querySelector('#secondNumber').checkValidity()) {
     const regex = /[^a-zA-Z_]/g
-    const s = document.querySelector('#guest').value.replace(regex, '')
+    const s = parseInt(document.querySelector('#guest').value)
     const i = parseInt(document.querySelector('#firstNumber').value)
     const j = parseInt(document.querySelector('#secondNumber').value)
-    const ans = `${s}, your sum is ${add(i, j)}.`
+    const ans = ` Volume of cube is   ${(s* i* j)}.`
     document.querySelector('#result').innerHTML = ans
   }
 }
