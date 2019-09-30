@@ -18,7 +18,7 @@ const updateWithAdd = async (event) => {
     const s = parseInt(document.querySelector('#secondNumber').value)
     const i = parseInt(document.querySelector('#firstNumber').value)
    
-    const ans = ` No. of  Students is   ${(s* i)}.`
+    const ans = ` No. of  Items is   ${(s* i)}.`
     document.querySelector('#result').innerHTML = ans
   }
 }
